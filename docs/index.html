@@ -25,5 +25,15 @@
     sub-text
     
     <a href="connectiq://oauth?first=one&second=two"">Do Redirect</a>
+    <input id="saved"></input>
+    <script>
+      (() => {
+      const savedInput = document.querySelector("#saved");
+      savedInput.addEventListener("change", () => {
+        localStorage.setItem("saved", savedInput.value);
+      });
+      savedInput.value = localStorage.getItem("saved");
+      })();
+    </script>
   </body>
 </html>
