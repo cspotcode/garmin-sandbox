@@ -26,7 +26,7 @@ class MainView extends WatchUi.View {
         myText = new WatchUi.TextArea({
             :text=>"",
             :color=>Graphics.COLOR_WHITE,
-            :font=>Graphics.FONT_SMALL,
+            :font=>Graphics.FONT_TINY,
             :locX =>WatchUi.LAYOUT_HALIGN_CENTER,
             :locY=>WatchUi.LAYOUT_VALIGN_CENTER,
             :width=>160,
@@ -36,7 +36,7 @@ class MainView extends WatchUi.View {
 
     // Update the view
     function onUpdate(dc as Dc) as Void {
-        myText.setText("Value from oauth:\n" + $.message);
+        myText.setText("Values received:\n" + $.param_a + "\n" + $.param_b);
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
         dc.clear();
         myText.draw(dc);

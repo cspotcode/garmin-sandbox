@@ -35,8 +35,7 @@ class MainMenuInputDelegate extends WatchUi.Menu2InputDelegate {
 
     private function createParams() as Dictionary {
         return {
-            "param_a" => $.message,
-            "param_b" => "this is param_b from device"
+            "param_a" => $.param_a
         };
     }
 }

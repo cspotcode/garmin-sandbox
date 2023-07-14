@@ -10,7 +10,8 @@ function getApp() as OAuthTestApp {
 
 // Value received from oauth, shown on main view and sent with subsequent
 // oauth requests
-var message = "<no value received>";
+var param_a = "<no value received>";
+var param_b = "<no value received>";
 
 (:background)
 class OAuthTestApp extends Application.AppBase {
@@ -42,9 +43,13 @@ class OAuthTestApp extends Application.AppBase {
         System.println(message.responseCode);
         System.println(data);
         // $.message = message.responseCode.format("%d");
-        $.message = data["param_a"];
-        if ($.message == null) {
-            $.message = "<unexpected response from oauth>";
+        $.param_a = data["param_a"];
+        $.param_b = data["param_b"];
+        if ($.param_a == null) {
+            $.param_a = "<unexpected response from oauth>";
+        }
+        if ($.param_b == null) {
+            $.param_b = "<unexpected response from oauth>";
         }
         WatchUi.requestUpdate();
     }

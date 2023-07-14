@@ -2,6 +2,9 @@
 <html manifest="cache.appcache">
   <head>
     <script>
+      // Enable offline support:
+      // this page will open even without internet connection
+
       if ("serviceWorker" in navigator) {
         navigator.serviceWorker
           .register("./sw.js")
@@ -21,18 +24,37 @@
   </head>
   <body>
 
-    <h1>Hello world!</h1>
-    sub-text
-    
-    <a href="connectiq://oauth?first=one&second=two"">Do Redirect</a>
-    <input id="saved"></input>
+    <h1>Garmin Oauth demo</h1>
+    <p>
+    Value from device, can be changed and sent back to device: <input id="param_a"></input>
+    </p>
+    <p>
+    Value saved in browser, also sent to device.  Shows that smartphone can store additional data the device does not need to keep: <input id="param_b"></input>
+    </p>
+    <p>
+      <button id="save">Save</a>
+    </p>
+
     <script>
       (() => {
-      const savedInput = document.querySelector("#saved");
-      savedInput.addEventListener("change", () => {
-        localStorage.setItem("saved", savedInput.value);
-      });
-      savedInput.value = localStorage.getItem("saved");
+        const paramAInput = document.querySelector("#param_a");
+        const paramBInput = document.querySelector("#param_b");
+        const saveButton = document.querySelector("#save");
+        paramBInput.addEventListener("change", () => {
+          localStorage.setItem("param_b", paramBInput.value);
+        });
+        const url = new URL(location.href);
+        paramAInput.value = url.searchParams.get('param_a');
+        paramBInput.value = localStorage.getItem("param_b_input");
+        saveButton.addEventListener('click', () => {
+          location.href = getUrl();
+        });
+        function getUrl() {
+          const url = new URL('connectiq://oauth');
+          url.searchParams.append('param_a', paramAInput.value);
+          url.searchParams.append('param_b', paramAInput.value);
+          return url.toString();
+        }
       })();
     </script>
   </body>
