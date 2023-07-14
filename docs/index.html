@@ -21,19 +21,32 @@
           });
       }
     </script>
+    <style>
+      html {
+        width: 100vw;
+      }
+      html,body {
+        margin: 0;
+      }
+    </style>
   </head>
   <body>
 
     <h1>Garmin Oauth demo</h1>
     <p>
-    Value from device, can be changed and sent back to device: <input id="param_a"></input>
+    Value from device:<br/>
+    <input id="param_a"></input><br/>
+    Can be changed and sent back to device.
     </p>
     <p>
-    Value saved in browser, also sent to device.  Shows that smartphone can store additional data the device does not need to keep: <input id="param_b"></input>
+    Value saved in browser, also sent to device:<br/>
+    <input id="param_b"></input><br/>
+    Demonstrates that smartphone can store additional data the device does not need to keep.
+    (swappable configs, presets, stuff like that)
     </p>
-    <p>
+    <div>
       <button id="save">Save</a>
-    </p>
+    </div>
 
     <script>
       (() => {
