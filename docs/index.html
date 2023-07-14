@@ -45,14 +45,14 @@
         });
         const url = new URL(location.href);
         paramAInput.value = url.searchParams.get('param_a');
-        paramBInput.value = localStorage.getItem("param_b_input");
+        paramBInput.value = localStorage.getItem("param_b");
         saveButton.addEventListener('click', () => {
           location.href = getUrl();
         });
         function getUrl() {
           const url = new URL('connectiq://oauth');
           url.searchParams.append('param_a', paramAInput.value);
-          url.searchParams.append('param_b', paramAInput.value);
+          url.searchParams.append('param_b', paramBInput.value);
           return url.toString();
         }
       })();
