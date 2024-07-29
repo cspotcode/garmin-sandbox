@@ -1,0 +1,12 @@
+<strings>
+    <string id="AppName">Currency Converter</string>
+
+    <string id="propertyTitle_currencyALabel">Currency A</string>
+    <string id="propertyTitle_currencyADecimalPoints">Currency A Decimal Points</string>
+    <string id="propertyTitle_currencyBLabel">Currency B</string>
+    <string id="propertyTitle_currencyBDecimalPoints">Currency B Decimal Points</string>
+    <string id="propertyTitle_exchangeRate">Exchange Rate</string>
+
+    <string id="settingsMenu_setExchangeRate">Exchange Rate</string>
+    <string id="settingsMenu_swapCurrencies">Swap Currencies</string>
+</strings>

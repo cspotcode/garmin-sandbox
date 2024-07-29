@@ -1,0 +1,17 @@
+<settings>
+    <setting propertyKey="@Properties.currencyALabel" title="@Strings.propertyTitle_currencyALabel">
+        <settingConfig type="alphaNumeric" readonly="false" />
+    </setting>
+    <setting propertyKey="@Properties.currencyADecimalPoints" title="@Strings.propertyTitle_currencyADecimalPoints">
+        <settingConfig type="numeric" readonly="false" />
+    </setting>
+    <setting propertyKey="@Properties.currencyBLabel" title="@Strings.propertyTitle_currencyBLabel">
+        <settingConfig type="alphaNumeric" readonly="false" />
+    </setting>
+    <setting propertyKey="@Properties.currencyBDecimalPoints" title="@Strings.propertyTitle_currencyBDecimalPoints">
+        <settingConfig type="numeric" readonly="false" />
+    </setting>
+    <setting propertyKey="@Properties.exchangeRate" title="@Strings.propertyTitle_exchangeRate">
+        <settingConfig type="numeric" readonly="false" />
+    </setting>
+</settings>

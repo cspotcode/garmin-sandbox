@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "monkeyc optimized release: vivoactive4s",
+			"type": "omonkeyc",
+			"device": "vivoactive4s",
+
+			"simulatorBuild": false,
+			"releaseBuild": true,
+			"outputPath": "optimized/release",
+
+			// "folderPath": "c:\\Users\\cspot\\Documents\\dev\\@cspotcode\\garmin-sandbox\\CurrencyConverter",
+			"problemMatcher": [],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}

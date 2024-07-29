@@ -1,0 +1,9 @@
+<properties>
+    <property id="currencyALabel" type="string">USD</property>
+    <property id="currencyADecimalPoints" type="number">2</property>
+    <property id="currencyAValue" type="number">0</property>
+    <property id="currencyBLabel" type="string">JPY</property>
+    <property id="currencyBDecimalPoints" type="number">0</property>
+    <property id="currencyBValue" type="number">0</property>
+    <property id="exchangeRate" type="float">1</property>
+</properties>

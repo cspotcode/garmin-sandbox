@@ -1,0 +1,5 @@
+<!-- <menu2 id="SettingsMenu" title="Settings"> -->
+<menu2 id="SettingsMenu">
+    <menu-item id="setExchangeRate" label="@Strings.settingsMenu_setExchangeRate" />
+    <menu-item id="swapCurrencies" label="@Strings.settingsMenu_swapCurrencies" />
+</menu2>

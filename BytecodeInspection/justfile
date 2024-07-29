@@ -1,0 +1,30 @@
+set shell := ["cmd.exe", "/c"]
+
+mbjar := home_dir() + "/AppData/Roaming/Garmin/ConnectIQ/Sdks/connectiq-sdk-win-7.2.1-2024-06-25-7463284e6/bin/monkeybrains.jar"
+
+debug:
+    java -Xms1g -Dfile.encoding=UTF-8 -Dapple.awt.UIElement=true \
+        -jar {{mbjar}} \
+        -o bin/BytecodeInspection.prg \
+        -f monkey.jungle \
+        -y c:/Users/cspot/Documents/dev/@cspotcode/garmin-audio-share/AudioShare/developer-key/developer_key \
+        -d vivoactive4s \
+        -w \
+        --optimization 3pz \
+        -g
+
+debug_profiling:
+    java -Xms1g -Dfile.encoding=UTF-8 -Dapple.awt.UIElement=true \
+        -jar {{mbjar}} \
+        -o bin/BytecodeInspection.prg \
+        -f monkey.jungle \
+        -y c:/Users/cspot/Documents/dev/@cspotcode/garmin-audio-share/AudioShare/developer-key/developer_key \
+        -d vivoactive4s \
+        -w \
+        --optimization 3pz \
+        -g \
+        -k
+
+clean:
+    del bin
+    del build-for-vivoactive4s

@@ -1,0 +1,6 @@
+<layout id="MainLayout">
+    <label id="currencyA" x="center" y="30%" text=""    font="Graphics.FONT_MEDIUM" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER" />
+    <label id="exchangeRate" x="center" y="50%" text="" font="Graphics.FONT_SMALL" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER" />
+    <label id="currencyB" x="center" y="70%" text=""    font="Graphics.FONT_MEDIUM" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER" />
+    <!-- <bitmap id="id_monkey" x="center" y="30" filename="../drawables/launcher_icon.png" /> -->
+</layout>

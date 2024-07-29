@@ -1,0 +1,2 @@
+project.manifest = manifest.xml
+vivoactive4s.sourcePath = source/**.mc
